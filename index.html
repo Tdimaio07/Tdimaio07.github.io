@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>MetroBingo</title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="css/normalize.css">
+            <link rel="stylesheet" href="css/styles.css">
+        </head>
+        
+        <body onabort="Leaderboard()">
+            <header class="site-header inicio">
+                <div class="contenedor contenido-header">
+                    <div class="barra">
+                        <a href="/">
+                            <img src="img/metrobingo_Mesa de trabajo 1.svg" alt="Logotipo">
+                        </a>
+                    </div>
+                </div> <!-- contenedor -->
+            </header>
+        
+            <main class="seccion-contenedor">
+                <h2 class="fw-300 centrar-texto">MetroBingo</h2>
+                
+                <div class="contenedor-anuncios">
+                    <div class="contenedor-tabla">
+                       
+                        <article>
+                            <table>
+                                <h3>Puntajes</h3>
+                                <thead>
+                                    <tr>
+                                        <th>N°</th>
+                                        <th>Jugador</th>
+                                        <th>Victorias</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Jugador1</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jugador2</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Jugador3</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                        
+                        <article>
+                            <h3>Como Jugar?</h3>
+                            <p>El Bingo es un juego de azar para 4 personas que se juega con 50 bolas numeradas y un cartón por persona. Los cartones de bingo disponen de 9, 16 y 25 números, todo depende de la eleccion del carton a utilizar en este caso puede ser un carton (3x3), (4x4) y (5x5).</p>
+                            <a href="comosejuega.html" class="boton boton-gris">Leer Mas</a>
+                        </article>
+                    </div>
+
+                    <div>
+                        <form>
+                            <fieldset>
+                                <legend>Ingrese el nick de los jugadores</legend>
+                
+                                <label for="jugador1">Jugador 1:</label>
+                                <input id="jugador1" type="text" placeholder="Nick 1">
+                
+                                <label for="jugador2">Jugador 2:</label>
+                                <input id="jugador2" type="text" placeholder="Nick 2">
+                                
+                                <label for="jugador3">Jugador 3:</label>
+                                <input id="jugador3" type="text" placeholder="Nick 3">
+                                
+                                <label for="jugador4">Jugador 4:</label>
+                                <input id="jugador4" type="text" placeholder="Nick 4">
+                            </fieldset>
+                
+                            <fieldset>
+                                <legend>Caracteristicas del juego</legend>
+                
+                                <label for="opciones">Tamano del carton:</label>
+                                <select id="opciones">
+                                    <option value="" disabled selected>-- Selecione --</option>
+                                    <option onclick="empezar_partida(3)">3x3</option>
+                                    <option onclick="empezar_partida(4)">4x4</option>
+                                    <option onclick="empezar_partida(5)">5x5</option>
+                                </select> 
+                            </fieldset>
+                        </form>
+                
+                
+                        <div>
+                            <h3>Modo Juego</h3>
+                        </div>
+                        <div class="controls">
+                            <button id="startButton">Iniciar Juego</button>
+                            <button onclick="reiniciar()">Reiniciar</button>
+                            <button id="markButton" disabled>Marcar Número</button>
+                        </div>
+                    </div>
+                </div> <!--contenedor-->
+            </main>
+            <footer class="site-footer seccion">
+                <div class="contenedor contenedor-footer">
+                    <p class="copyright">Creador Tomas Dimaio</p>
+        
+                    <p class="copyright">Todos los Derechos Reservados 2024 &copy; </p> 
+                </div>
+            </footer>
+            <script src="script.js"></script>
+        </body>
+    </html>

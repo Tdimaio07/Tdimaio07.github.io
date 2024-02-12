@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroBingo</title>
+    <script src="script.js"></script>
+</head>
+<body onload="Iniciar_partida()">
+
+    <div>
+        <h1>Partida</h1>
+        <select name="opciones" id="opciones" onchange="mostrar_carton()" disabled>
+            <option value="opcion1">jugador1</option>
+            <option value="opcion2">jugador2</option>
+            <option value="opcion3">jugador3</option>
+            <option value="opcion4">jugador4</option>
+        </select>
+
+        <div>
+            <h2 id="jugador">Jugador: </h2>
+            <div class="matrizjugador" id="matriz"></div>
+        </div>
+
+        <div>
+            <button id="sacarnumero" onclick="generarNumeroAzar()" disabled>Sacar Numero</button>
+            <h2 id="numero">Numero: </h2>
+        </div>
+    </div>
+</body>
+</html>
